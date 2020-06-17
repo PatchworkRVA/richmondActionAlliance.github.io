@@ -103,18 +103,38 @@
                         </section>
                         <hr class="rounded">
                         <!-- Contact Us section -->
-                        <form action="https://postmail.invotes.com/send"
-                              method="post" id="email_form">
+                        <section id="contact" class="tm-section">
+                            <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Contact Us</h2></header>
+                            <form action="https://postmail.invotes.com/send"
+                                  method="post" id="email_form">
 
-                            <input type="text" name="subject" placeholder="Subject" />
-                            <textarea name="text" placeholder="Message"></textarea>
-                            <input type="hidden" name="access_token" value="owubujyqi1h95cr4tv96pxn2" />
-                            <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
-                            <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
-                            <input id="submit_form" type="submit" value="Send" />
-                            <!-- not required, but we'd appreciate it if you'd link to us somewhere on your site -->
-                            <p>Powered by <a href="https://postmail.invotes.com" target="_blank">PostMail</a></p>
-                        </form>
+                                <input type="text" name="subject" placeholder="Subject" />
+                                <textarea name="text" placeholder="Message"></textarea>
+                                <input type="hidden" name="access_token" value="owubujyqi1h95cr4tv96pxn2" />
+                                <!-- return urls can be fully qualified -OR-
+       start with / for root relative -OR-
+       start with . for url relative -->
+                                <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
+                                <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
+
+
+                                <!-- set the reply-to address -->
+                                <!-- <input type="text" name="reply_to"
+                placeholder="Your Email" /> -->
+                                <!-- to append extra fields, use the extra_ prefix.
+        Entries will be appended to your message body. -->
+                                <!-- <input type="text" name="extra_phone_number"
+                placeholder="Phone Number" /> -->
+                                <!-- to split your message into 160 chars
+         for an sms gateway -->
+                                <!-- <input type="hidden"
+                name="sms_format" value="true" /> -->
+
+                                <input id="submit_form" type="submit" value="Send" />
+                                <!-- not required, but we'd appreciate it if you'd link to us somewhere on your site -->
+                                <p>Powered by <a href="https://postmail.invotes.com" target="_blank">PostMail</a></p>
+                            </form>
+                        </section>"
                         <footer>
                             <p class="tm-copyright-p">
                                 Copyright &copy; <span class="tm-current-year">2017</span> Your Company
