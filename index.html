@@ -23,33 +23,6 @@
       <![endif]-->
 </head>
 <body>
-    <!-- Load Facebook SDK for JavaScript -->
-    <div id="fb-root"></div>
-    <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            xfbml            : true,
-            version          : 'v7.0'
-          });
-        };
-
-        (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
-
-    <!-- Your Chat Plugin code -->
-    <div class="fb-customerchat"
-         attribution=setup_tool
-         page_id="109941664086607"
-         theme_color="#ffc300"
-         logged_in_greeting="Hi! Let us know if you have any questions. Thanks!"
-         logged_out_greeting="Hi! Let us know if you have any questions. Thanks!">
-    </div>
-
     <div class="container">
         <div class="row">
             <div class="tm-left-right-container">
@@ -134,7 +107,7 @@
                             <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Contact Us</h2></header>
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <form action="#contact" method="post" class="contact-form">
+                                    <form action="contactForm.php" method="post" class="contact-form">
                                         <div class="form-group">
                                             <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name" required />
                                         </div>
