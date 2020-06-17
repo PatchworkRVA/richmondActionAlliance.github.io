@@ -103,37 +103,18 @@
                         </section>
                         <hr class="rounded">
                         <!-- Contact Us section -->
-                        <section id="contact" class="tm-section">
-                            <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Contact Us</h2></header>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <form action="contactForm.php" method="post" class="contact-form">
-                                        <div class="form-group">
-                                            <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name" required />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email" required />
-                                        </div>
-                                        <div class="form-group">
-                                            <textarea id="contact_message" name="contact_message" class="form-control" rows="9" placeholder="Message" required></textarea>
-                                        </div>
-                                        <button type="submit" class="float-right tm-button">Send</button>
-                                    </form>
-                                </div>
+                        <form action="https://postmail.invotes.com/send"
+                              method="post" id="email_form">
 
-                                <div class="col-lg-6 tm-contact-right">
-                                    <p>
-                                        Nullam vivera fermentum purus id blandit. Phasellus lacus mi, porta vel sodales nec, faucibus non eros. Nulla at quam vel risus laoreet tincidunt in in sem.
-                                    </p>
-                                    <address>
-                                        11/22 Etiam mauris erat,<br>
-                                        Vestibulum eu augue nec, 10220<br>
-                                        Nam consequat
-                                    </address>
-                                </div>
-                            </div>
-
-                        </section>
+                            <input type="text" name="subject" placeholder="Subject" />
+                            <textarea name="text" placeholder="Message"></textarea>
+                            <input type="hidden" name="access_token" value="owubujyqi1h95cr4tv96pxn2" />
+                            <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
+                            <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
+                            <input id="submit_form" type="submit" value="Send" />
+                            <!-- not required, but we'd appreciate it if you'd link to us somewhere on your site -->
+                            <p>Powered by <a href="https://postmail.invotes.com" target="_blank">PostMail</a></p>
+                        </form>
                         <footer>
                             <p class="tm-copyright-p">
                                 Copyright &copy; <span class="tm-current-year">2017</span> Your Company
@@ -185,6 +166,16 @@
                 });
 
                 $('.tm-current-year').text(new Date().getFullYear());
+            });
+    </script>
+    <script>
+            var submitButton = document.getElementById("submit_form");
+            var form = document.getElementById("email_form");
+            form.addEventListener("submit", function (e) {
+                setTimeout(function() {
+                    submitButton.value = "Sending...";
+                    submitButton.disabled = true;
+                }, 1);
             });
     </script>
 </body>
