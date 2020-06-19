@@ -77,7 +77,7 @@
                 <!-- Right column: content -->
                 <div class="tm-right-column">
                     <figure>
-                        <img src="img/neaty-01.jpg" alt="Header image" class="img-fluid">
+                        <img src="img/blm.jpg" alt="Header image" class="img-fluid">
                     </figure>
 
                     <div class="tm-content-div">
@@ -92,15 +92,32 @@
                         <!-- Current Events Facebook based -->
                         <section id="currentEvents">
                             <div class="row">
-                                <div class="column" id="events">
+                                <div class="col-lg-8" id="events">
                                     <header>
                                         <h2 class="tm-blue-text tm-section-title tm-margin-b-45">Events</h2>
                                     </header>
                                     <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FRichmond.action.alliance&tabs=events&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="500" style="border:none;overflow:hidden" scrolling="yes" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                                 </div>
-                                
+                                <div class="col-sm-12">
+                                    <p>If you're interested in volunteering or hosting events please message us on Facebook or submit your information in the 
+                                    contact form below.</p>
+                                    <p>Thank you.</p>
+                                </div>
                             </div>
-							<hr class="roundedVerticle">
+                            <!-- Trigger/Open The Modal -->
+                            <button id="myBtn">Google Event Calendar</button>
+
+                            <!-- The Modal -->
+                            <div id="myModal" class="modal">
+
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <iframe src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23E4C441&amp;ctz=America%2FNew_York&amp;src=cmljaG1vbmQuYWN0aW9uLmFsbGlhbmNlQGdtYWlsLmNvbQ&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23039BE5&amp;color=%230B8043&amp;showTabs=0" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                                </div>
+
+                            </div>
+                            <hr class="roundedVerticle">
                         </section>
                         <hr class="rounded">
                         <!-- About section -->
@@ -113,7 +130,7 @@
                                     <p>We started this group blabla bla</p>
                                     <p>Donec ut lectus semper, sollicitudin risus blandit, mattis felis. Nam non malesuada odio. Vestibulum vaius, arcu eget rutrum consequat, arcu lacus imperdiet arcu, id pulvinar arcu erat vel magna.</p>
                                     <p>Ut commodo malesuada eros, quis consequat ante tincidunt ut. Suspendisse malesuada augue vitae nisi sollicitudin placerat.</p>
-                                    <a href="#" class="tm-button tm-button-wide">Read More</a>
+                                    
                                 </div>
                                 <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 pull-lg-8 pull-md-7 tm-about-img-container">
                                     <img src="img/neaty-02.jpg" alt="Image" class="img-fluid">
@@ -131,6 +148,8 @@
                         <!-- Contact Us section -->
                         <section id="contact" class="tm-section">
                             <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Contact Us</h2></header>
+                            <p>If your interested in volunteering, partnering with us or just have general questions, please fill out the form below and we will get back to you as soon as we are able.</p>
+                            <p>Thank you.</p>
                             <div class="row">
                                 <div class="col-lg-6">
                                     <form action="https://postmail.invotes.com/send"
@@ -210,6 +229,33 @@
                     submitButton.disabled = true;
                 }, 1);
             });
+    </script>
+    <script>
+        // Get the modal
+            var modal = document.getElementById("myModal");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
     </script>
 </body>
 </html>
