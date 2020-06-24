@@ -38,7 +38,13 @@ textarea {
     resize: none;
     margin-top: 20px;
 }
-#submitButton{
+#eventListingModal{
+    width:700px;
+}
+#formModal{
+    width:1000px;
+}
+#submitButton {
     padding-left: 0px;
 }
 a, button { transition: all 0.3s ease; }

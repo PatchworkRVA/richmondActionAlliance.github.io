@@ -41,7 +41,7 @@
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));</script>
 
-    <!-- Your Chat Plugin code -->
+    <!-- Facebook Plugin code -->
     <div class="fb-customerchat"
          attribution=setup_tool
          page_id="109941664086607"
@@ -49,15 +49,20 @@
          logged_in_greeting="Welcome! Feel free to message us if you have questions or want to volunteer!"
          logged_out_greeting="Welcome! Feel free to message us if you have questions or want to volunteer!">
     </div>
+
     <div class="container">
         <div class="row">
+            <!-- site left right container, sets up the left menu bar and right site body  -->
             <div class="tm-left-right-container">
+
                 <!-- Left column: logo and menu -->
                 <div class="tm-blue-bg tm-left-column">
+                    <!-- logo for menu bar  -->
                     <div class="tm-logo-div text-xs-center">
                         <img src="img/RAAlogoGoldXSmTransparent1.png" alt="Logo">
                         <h1 class="tm-site-name">The Richmond Action Alliance</h1>
                     </div>
+                    <!-- menu bar  -->
                     <div class="navDiv">
                         <nav class="tm-main-nav">
                             <ul class="tm-main-nav-ul">
@@ -65,7 +70,7 @@
                                     <a href="#currentEvents" class="tm-nav-item-link">Events</a>
                                 </li>
                                 <li class="tm-nav-item">
-                                    <a href="#about" class="tm-nav-item-link">About Us</a>
+                                    <a href="#about" class="tm-nav-item-link">About The Team</a>
                                 </li>
                                 <li class="tm-nav-item">
                                     <a href="#contact" class="tm-nav-item-link">Contact Us</a>
@@ -73,13 +78,17 @@
                             </ul>
                         </nav>
                     </div>
-                </div> <!-- Left column: logo and menu -->
+
+                </div>
+
                 <!-- Right column: content -->
                 <div class="tm-right-column">
+                    <!-- site header image -->
                     <figure>
                         <img src="img/blm.jpg" alt="Header image" class="img-fluid">
                     </figure>
 
+                    <!-- beginning of site body -->
                     <div class="tm-content-div">
                         <!-- Welcome section -->
                         <section id="welcome" class="tm-section">
@@ -88,37 +97,61 @@
                             </header>
                             <p>Neaty is simple and clean design HTML CSS template for any kind of website. Feel free to use this layout. Please tell your friends about TemplateMo website. Thank you. Suspendisse imperdiet, felis eu hendrerit pretium, sapien mauris blandit arcu, et accumsan neque est ut erat. Vivamus eget tellus euismod, interdum nibh at, eleifend justo. Quisque placerat ante in ex tempor, ultrices bibendum nunc finibus. Etiam luctus nec eros vel pulvinar.</p>
                         </section>
+
+
                         <hr class="rounded">
                         <!-- Current Events Facebook based -->
                         <section id="currentEvents">
                             <div class="row">
                                 <div class="col-lg-8" id="events">
                                     <header>
-                                        <h2 class="tm-blue-text tm-section-title tm-margin-b-45">Events</h2>
+                                        <h2 class="tm-blue-text tm-section-title tm-margin-b-45">Event Calendar</h2>
                                     </header>
-                                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FRichmond.action.alliance&tabs=events&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="500" style="border:none;overflow:hidden" scrolling="yes" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                                    <div class="btn-group" id="buttonGroup">
+                                        <button type="button" class="btn btn-primary" id="formButton">Volunteer Form</button>
+                                        <button type="button" class="btn btn-primary" id="gallery1">Juneteenth Gallery</button>
+                                        <button type="button" class="btn btn-primary" id="eventListingsButton">Event Listings</button>
+                                    </div>
+                                    <iframe src="https://calendar.google.com/calendar/b/4/embed?height=600&amp;wkst=1&amp;bgcolor=%23039BE5&amp;ctz=America%2FNew_York&amp;src=Y29udGFjdEB0aGVyaWNobW9uZGFjdGlvbmFsbGlhbmNlLm9yZw&amp;color=%23039BE5&amp;showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;showCalendars=0&amp;showDate=1" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
                                 </div>
-                                <div class="col-sm-12">
-                                    <p>If you're interested in volunteering or hosting events please message us on Facebook or submit your information in the 
-                                    contact form below.</p>
-                                    <p>Thank you.</p>
+
+                                <!-- The Juneteenth Modal -->
+                                <div id="eventModal" class="modal">
+
+                                    <!-- Modal content -->
+                                    <div class="modal-content">
+                                        <span class="close" rel="eventModal" id="eventClose">&times;</span>
+                                        <div class='embedsocial-album' data-ref="f1be008b4ac855f197e104ee733050e96ae549a5"></div>
+                                        <script>(function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/embedscript/ei.js"; d.getElementsByTagName("head")[0].appendChild(js);}(document, "script", "EmbedSocialScript"));</script>
+                                    </div>
+
                                 </div>
+                                <!-- end modal script  -->
+                                <!-- The Form Modal -->
+                                <div id="formModal" class="modal">
+
+                                    <!-- Modal content -->
+                                    <div class="modal-content">
+                                        <span class="close" rel="formModal" id="formClose">&times;</span>
+                                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdR4DpfxRSF_N02Ojkl-75u2pmy6wEUogRGVLsUj4ka0TvYBw/viewform?embedded=true" width="640" height="1249" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                                    </div>
+                                </div>
+                                <!-- end modal script  -->
+
+                                <!-- The EventListing Modal -->
+                                <div id="eventListingModal" class="modal">
+
+                                    <!-- Modal content -->
+                                    <div class="modal-content">
+                                        <span class="close" rel="eventListingModal" id="listingClose">&times;</span>
+                                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FRichmond.action.alliance%2F&tabs=events&width=500&height=244&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=true&appId=746641966104887" width="500" height="244" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                                    </div>
+                                </div>
+                                <!-- end modal script  -->
                             </div>
-                            <!-- Trigger/Open The Modal -->
-                            <button id="myBtn">Google Event Calendar</button>
-
-                            <!-- The Modal -->
-                            <div id="myModal" class="modal">
-
-                                <!-- Modal content -->
-                                <div class="modal-content">
-                                    <span class="close">&times;</span>
-                                    <iframe src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23E4C441&amp;ctz=America%2FNew_York&amp;src=cmljaG1vbmQuYWN0aW9uLmFsbGlhbmNlQGdtYWlsLmNvbQ&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23039BE5&amp;color=%230B8043&amp;showTabs=0" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-                                </div>
-
-                            </div>
-                            <hr class="roundedVerticle">
                         </section>
+
+
                         <hr class="rounded">
                         <!-- About section -->
                         <section id="about" class="tm-section">
@@ -130,25 +163,20 @@
                                     <p>We started this group blabla bla</p>
                                     <p>Donec ut lectus semper, sollicitudin risus blandit, mattis felis. Nam non malesuada odio. Vestibulum vaius, arcu eget rutrum consequat, arcu lacus imperdiet arcu, id pulvinar arcu erat vel magna.</p>
                                     <p>Ut commodo malesuada eros, quis consequat ante tincidunt ut. Suspendisse malesuada augue vitae nisi sollicitudin placerat.</p>
-                                    
+
                                 </div>
                                 <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 pull-lg-8 pull-md-7 tm-about-img-container">
                                     <img src="img/neaty-02.jpg" alt="Image" class="img-fluid">
                                 </div>
                             </div>
                         </section>
-                        <hr class="rounded">
-                        <!-- Gallery One section -->
-                        <section id="galleryone" class="tm-section">
-                            <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Gallery</h2></header>
-                            <div class='embedsocial-album' data-ref="5345ea01ca27e0d251b922f0dca11108f67c7dd1"></div>
-                            <script>(function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/embedscript/ei.js"; d.getElementsByTagName("head")[0].appendChild(js);}(document, "script", "EmbedSocialScript"));</script>
-                        </section>
+
+
                         <hr class="rounded">
                         <!-- Contact Us section -->
                         <section id="contact" class="tm-section">
                             <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Contact Us</h2></header>
-                            <p>If your interested in volunteering, partnering with us or just have general questions, please fill out the form below and we will get back to you as soon as we are able.</p>
+                            <p>If your interested in partnering with us or just have general questions, please fill out the form below and we will get back to you as soon as we are able.</p>
                             <p>Thank you.</p>
                             <div class="row">
                                 <div class="col-lg-6">
@@ -156,7 +184,7 @@
                                           method="post" id="email_form">
                                         <input type="text" name="subject" placeholder="Subject" />
                                         <textarea name="text" placeholder="Message"></textarea>
-                                        <input type="hidden" name="access_token" value="owubujyqi1h95cr4tv96pxn2" />
+                                        <input type="hidden" name="access_token" value="o3fcx7q8afywi7378k8uksrp" />
                                         <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
                                         <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
                                         <div class="col-lg-6" id="submitButton">
@@ -166,6 +194,8 @@
                                 </div>
                             </div>
                         </section>
+
+                        <!-- copy right section -->
                         <footer>
                             <p class="tm-copyright-p">
                                 Copyright &copy; <span class="tm-current-year">2020</span> Richmond Action Alliance
@@ -184,9 +214,8 @@
     <script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
     <script src="js/jquery.magnific-popup.min.js"></script>     <!-- Magnific pop-up (http://dimsemenov.com/plugins/magnific-popup/) -->
     <script src="js/jquery.singlePageNav.min.js"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
+    <!-- script for menu bar scroll and highlight feature  -->
     <script>
-
-
             $(document).ready(function(){
 
                 // Single page nav
@@ -194,32 +223,10 @@
                     'currentClass' : "active",
                     offset : 20
                 });
-
-                // Magnific pop up
-                $('.tm-gallery-1').magnificPopup({
-                  delegate: 'a', // child items selector, by clicking on it popup will open
-                  type: 'image',
-                  gallery: {enabled:true}
-                  // other options
-                });
-
-                $('.tm-gallery-2').magnificPopup({
-                  delegate: 'a', // child items selector, by clicking on it popup will open
-                  type: 'image',
-                  gallery: {enabled:true}
-                  // other options
-                });
-
-                $('.tm-gallery-3').magnificPopup({
-                  delegate: 'a', // child items selector, by clicking on it popup will open
-                  type: 'image',
-                  gallery: {enabled:true}
-                  // other options
-                });
-
                 $('.tm-current-year').text(new Date().getFullYear());
             });
     </script>
+    <!-- script for email form submit button  -->
     <script>
             var submitButton = document.getElementById("submit_form");
             var form = document.getElementById("email_form");
@@ -230,30 +237,83 @@
                 }, 1);
             });
     </script>
+    <!-- script for event modal  -->
     <script>
         // Get the modal
-            var modal = document.getElementById("myModal");
+            var modal = document.getElementById("eventModal");
 
             // Get the button that opens the modal
-            var btn = document.getElementById("myBtn");
+            var btn = document.getElementById("gallery1");
+
+            //close method used by form modal as well
+            var close_click = function() {
+                var ModalID = this.getAttribute("rel");
+                document.getElementById(ModalID).style.display = 'none';
+            };
 
             // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
+            var span = document.getElementById("eventClose");
 
             // When the user clicks on the button, open the modal
             btn.onclick = function() {
               modal.style.display = "block";
             }
+            span.addEventListener('click', close_click, false) ;
 
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-              modal.style.display = "none";
-            }
 
             // When the user clicks anywhere outside of the modal, close it
             window.onclick = function(event) {
               if (event.target == modal) {
                 modal.style.display = "none";
+              }
+            }
+    </script>
+
+    <!-- script for form modal  -->
+    <script>
+        // Get the form modal
+            var formModal = document.getElementById("formModal");
+
+            // Get the button that opens the modal
+            var formbtn = document.getElementById("formButton");
+
+            // Get the <span> element that closes the modal
+            var span1 = document.getElementById("formClose");
+
+            span1.addEventListener('click', close_click, false) ;
+
+            // When the user clicks on the button, open the modal
+            formbtn.onclick = function() {
+              formModal.style.display = "block";
+            }
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == formModal) {
+                formModal.style.display = "none";
+              }
+            }
+    </script>
+    <!-- script for eventListing Modal  -->
+    <script>
+        // Get the form modal
+            var eventListingModal = document.getElementById("eventListingModal");
+
+            // Get the button that opens the modal
+            var eventbtn = document.getElementById("eventListingsButton");
+
+            // Get the <span> element that closes the modal
+            var span2 = document.getElementById("listingClose");
+
+            span2.addEventListener('click', close_click, false) ;
+
+            // When the user clicks on the button, open the modal
+            eventbtn.onclick = function() {
+              eventListingModal.style.display = "block";
+            }
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == eventListingModal) {
+                eventListingModal.style.display = "none";
               }
             }
     </script>
