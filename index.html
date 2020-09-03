@@ -23,13 +23,14 @@
       <![endif]-->
 </head>
 <body>
+
     <!-- Load Facebook SDK for JavaScript -->
     <div id="fb-root"></div>
     <script>
         window.fbAsyncInit = function() {
           FB.init({
             xfbml            : true,
-            version          : 'v7.0'
+            version          : 'v8.0'
           });
         };
 
@@ -41,7 +42,7 @@
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));</script>
 
-    <!-- Facebook Plugin code -->
+    <!-- Facebook Chat Plugin code -->
     <div class="fb-customerchat"
          attribution=setup_tool
          page_id="109941664086607"
@@ -67,11 +68,11 @@
                         <nav class="tm-main-nav">
                             <ul class="tm-main-nav-ul">
                                 <li class="tm-nav-item">
-                                    <a href="#currentEvents" class="tm-nav-item-link">Events</a>
+                                    <a href="#currentEvents" class="tm-nav-item-link">Events &amp; Volunteering</a>
                                 </li>
-                                <!--<li class="tm-nav-item">
-                                    <a href="#about" class="tm-nav-item-link">About The Team</a>
-                                </li>-->
+                                <li class="tm-nav-item">
+                                    <a href="#donate" class="tm-nav-item-link">Donate</a>
+                                </li>
                                 <li class="tm-nav-item">
                                     <a href="#contact" class="tm-nav-item-link">Contact Us</a>
                                 </li>
@@ -85,103 +86,266 @@
                 <div class="tm-right-column">
                     <!-- site header image -->
                     <figure>
-                        <img src="img/blm.jpg" alt="Header image" class="img-fluid">
+                        <img src="img/loveeveryoneLG.png" alt="Header image" class="img-fluid">
                     </figure>
 
                     <!-- beginning of site body -->
                     <div class="tm-content-div">
+
                         <!-- Welcome section -->
                         <section id="welcome" class="tm-section">
                             <header>
                                 <h2 class="tm-blue-text tm-welcome-title tm-margin-b-45">Join us in making Richmond a better place for everyone.</h2>
                             </header>
-                            <p>Richmond Action Alliance is a brand new grassroots non-profit aimed at supporting the local community with voter registration, racial justice, education, and bridging gaps within the community and local government. We have grown under the love and support of the community and we are thrilled to be able to put all that love and support right back into the community that we call home. Keep an eye on our website and social media pages for up-to-date information on upcoming events hosted by us and other organizations within the community!</p>
+                            <p>Richmond Action Alliance is a brand new grassroots non-profit aimed at supporting the local community with voter registration, racial justice, education, and bridging gaps within the community and local government. We have grown under the love and support of the community and we are thrilled to be able to put all that love and support right back into the community that we call home.</p>
+                            <p id="socialtagline">Keep an eye on our website and social media pages for up-to-date information on upcoming events hosted by us and other organizations within the community!</p></p>
+                            <a href="https://www.facebook.com/Richmond.action.alliance/" class="socialIcons">
+                                <img alt="Facebook" src="img/facebook.png"
+                                     width=50" height="50">
+                            </a>
+                            <a href="https://www.instagram.com/richmond.action.alliance/" class="socialIcons">
+                                <img alt="Instagram" src="img/instagram.png"
+                                     width=50" height="50">
+                            </a>
+                            <a href="https://twitter.com/actionrichmond">
+                                <img alt="Instagram" src="https://upload.wikimedia.org/wikipedia/ar/thumb/9/9f/Twitter_bird_logo_2012.svg/49px-Twitter_bird_logo_2012.svg.png"
+                                     width=60" height="50">
+                            </a>
                         </section>
 
-
                         <hr class="rounded">
-                        <!-- Current Events Facebook based -->
+
+                        <!-- Events and Pictures Section  -->
                         <section id="currentEvents">
                             <div class="row">
                                 <div class="col-lg-8" id="events">
                                     <header>
-                                        <h2 class="tm-blue-text tm-section-title tm-margin-b-45">Event Calendar</h2>
+                                        <h2 class="tm-blue-text tm-section-title tm-margin-b-45">Events &amp; Volunteering</h2>
                                     </header>
+                                    <h4>If you're interested with volunteering with the Richmond Action Alliance, please fill out 
+                                    a volunteer form and we will respond as soon as we can!</h4>
+                                    <h6>**All Volunteers will need to sign a conduct agreement form before volunteering</h6>
                                     <div class="btn-group" id="buttonGroup">
                                         <button type="button" class="btn btn-primary" id="formButton">Volunteer Form</button>
-                                        <button type="button" class="btn btn-primary" id="gallery1">Juneteenth Gallery</button>
                                         <button type="button" class="btn btn-primary" id="eventListingsButton">Event Listings</button>
                                     </div>
-                                    <iframe src="https://calendar.google.com/calendar/b/4/embed?height=600&amp;wkst=1&amp;bgcolor=%23039BE5&amp;ctz=America%2FNew_York&amp;src=Y29udGFjdEB0aGVyaWNobW9uZGFjdGlvbmFsbGlhbmNlLm9yZw&amp;color=%23039BE5&amp;showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;showCalendars=0&amp;showDate=1" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-                                </div>
-
-                                <!-- The Juneteenth Modal -->
-                                <div id="eventModal" class="modal">
-
-                                    <!-- Modal content -->
-                                    <div class="modal-content">
-                                        <span class="close" rel="eventModal" id="eventClose">&times;</span>
-                                        <div class='embedsocial-album' data-ref="f1be008b4ac855f197e104ee733050e96ae549a5"></div>
-                                        <script>(function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/embedscript/ei.js"; d.getElementsByTagName("head")[0].appendChild(js);}(document, "script", "EmbedSocialScript"));</script>
+                                    <div class="eventShowcaseHeader">
+                                        <h3>Event Showcase: The 2020 Juneteenth Celebration </h3>
                                     </div>
-
-                                </div>
-                                <!-- end modal script  -->
-                                <!-- The Form Modal -->
-                                <div id="formModal" class="modal">
-
-                                    <!-- Modal content -->
-                                    <div class="modal-content">
-                                        <span class="close" rel="formModal" id="formClose">&times;</span>
-                                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdR4DpfxRSF_N02Ojkl-75u2pmy6wEUogRGVLsUj4ka0TvYBw/viewform?embedded=true" width="640" height="1249" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-                                    </div>
-                                </div>
-                                <!-- end modal script  -->
-                                <!-- The EventListing Modal -->
-                                <div id="eventListingModal" class="modal">
-
-                                    <!-- Modal content -->
-                                    <div class="modal-content">
-                                        <span class="close" rel="eventListingModal" id="listingClose">&times;</span>
-                                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FRichmond.action.alliance%2F&tabs=events&width=500&height=244&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=true&appId=746641966104887" width="500" height="244" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                                    <script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
+                                    <div class="pa-carousel-widget" style="width:640px; height:480px; display:none;"
+                                         data-link="https://photos.app.goo.gl/58Cm3HQhGxomSkbM8"
+                                         data-title="Juneteenth Celebration 2020"
+                                         data-description="15 new photos added to shared album"
+                                         data-background-color="#006599">
+                                        <object data="https://lh3.googleusercontent.com/hMNvyWjFjqywaWlGUTmWQNWLCuRM_MMIxPsPkPRNxA35Kp0OVh_yxL2WLlE-FUb5GtbS5qrbI-DsEc4YRTSxDRm7wKQjxf0AUbLhwVRBjrzVhXx45GPJxPYMnECOKyKtCeH8ZsaLsw=w1920-h1080"></object>
+                                        <object data="https://lh3.googleusercontent.com/F82Hu2lptCxGV0siYjQHgLC6-4vqjQxfuvF_kagsSiHJaG1LI_lu4IFhht2mK-j51_H3XhkgGRBUm3ss8jkcJqkFSM9xxvsgqtoUq2zXSVjuRXD-UW8T4aXhLUVErClDpolhbEXNRQ=w1920-h1080"></object>
+                                        <object data="https://lh3.googleusercontent.com/bB4NsqXg17rtBGpQKOBqDES5C5-6dyNzh5O9lvNaIsay_eT8iv4ZMzFNdSoER3GdDWG-v6zzDmGbaCETLt_sCQQVdYLtcsGc-6tCJmzgsgTpnaS4ag9xmygaocW2OcvRft1pQyBfpg=w1920-h1080"></object>
+                                        <object data="https://lh3.googleusercontent.com/BVzIsUZQpEodFtL6QsDeAieEWbmVuKGB68lI7RKXvqkgR5yvZzEpkocfsDQIdDLXWPzb2UIBktU4Wj9r8kYGRZSV8V_kEDzcTfbuD1KXk_NbEhLxTBpHMuxTsXjPSkaEZNiKa5UBNA=w1920-h1080"></object>
+                                        <object data="https://lh3.googleusercontent.com/l1MY9vYvHxN6B1IwzHYgUD8j3ewCUWdLZc5sZVTDrGYzrLHF9999ufS3ogPg8zVBlwrlFwk5-1u0EfKaBwtpwK9kMgsAbqfJUcSuSuLDgInWyMtQ7Pjxw1-hp3VKtQ4tHwLNxqfTGA=w1920-h1080"></object>
+                                        <object data="https://lh3.googleusercontent.com/xc4kvYzbjssHWgKixD-7imlKqyr5Qieee_g_QQ_mOqDkYH4PVUJii1rMbmElqzxgaf6AC4G4GdivrwC4G9swQlMk1zd8RmahxbmfVdD5Ghv4O-fyW_OiUrexkOvQ_jcniivx9-nkhA=w1920-h1080"></object>
+                                        <object data="https://lh3.googleusercontent.com/KdGDdwzIfsyrDo1B5J2F8WTBf2p4yr_YoE42W86e2_cpuyrJxGTDDN6BZYNXBLcBEM38Q0K_r2mXocjmuGkRK6KDIcu4eMncT_4YK5gVptNSAaSaFjFfV2Ymr5UvMzd1Mnd_BRg_yw=w1920-h1080"></object>
+                                        <object data="https://lh3.googleusercontent.com/CmfF1m1GILjesaJAGkKwVqQoseReamNTBaxEsyx9_EUjMhCKOQ4lOQmMkLbD4sXkYebu5OuqNVyYCIb9TbwP9hWGF4dA1YN6k24UeBvlph0wiZCcOvVNx2VaNdUQ3ZUvQ8C6PkKYYA=w1920-h1080"></object>
+                                        <object data="https://lh3.googleusercontent.com/n2gixpmcKZK7mtPwfJLe7ljmw3bO8mzqNfgntU91MCKib30gEiMreYR-uYm3J0Q0hnkSB2cgnBBr9Ie4sYXowK1fjJMalT9IPLSWpxoC7h1SzI8TVORXt8De0P2dc-MvuPXREwVO3w=w1920-h1080"></object>
+                                        <object data="https://lh3.googleusercontent.com/_Bg8UcZHN2JaaaRn2BAOw2xM8i-i9TJs5oIZWBwEYH_H8fESmRCYMz1OpAW8lwZyG5vdCe1l2qa5Aib5S0hTr9MXIv_6gppXIjtpSB9JrMnVZfCpsXkY5twe9i0xYqB1jBQj51YhLg=w1920-h1080"></object>
+                                        <object data="https://lh3.googleusercontent.com/dCUkR98R5vyprcH7AQ5jmi92bXyyyo3l_4-ApaujJMYVoYC7W6AbWNs8jfMfWZqDU-Hbu1TR4hHM5b4WGCHIk6387iMKVx-hUCYjEHMgfjieG8_DGoW-kyLRUPwA_qSqJFwthLeNRA=w1920-h1080"></object>
+                                        <object data="https://lh3.googleusercontent.com/PXQYJzRruzPfHq7Q6HF47qolrfpQT1vdL63vkQTpUx3b2HSIezr7BIP4gIUEG32kvFLi_JmlGrC0WxKAiAHveFHaeju5a2IlS53kvnbstU-7ZlS8C_SqDU7NKKYoC3Ms4PrZx8a0xA=w1920-h1080"></object>
+                                        <object data="https://lh3.googleusercontent.com/q71AdDsUy4bsH3LOK3X7onufR5hjtHACH93OVJRAJmuIgSXRkfvFkmduaU2ICcQh_SbuZrHVDtw-l24d3tikJOhKhJbb6wiR_bznxb9tj0qemf-woSYyohWy8-DewrVbN54TaWEKCw=w1920-h1080"></object>
+                                        <object data="https://lh3.googleusercontent.com/z6lecBqoqpKsUtFpKpzjG0Fcmxe5nOLyp2Nw9kC_367kljpzfb6Is3QjhytnWeA-OkfRCUnVM5eYdyIpU9BqTbs5mT2Lc6CDaeNAmmhndEVx4EKpVAfvPMt0DIL3ETnd6URbro3mRg=w1920-h1080"></object>
+                                        <object data="https://lh3.googleusercontent.com/uz7TenNueWC7htbG1GBNDXwtIV2NH3259yDCbRQ99KRaZuwxlAMjgEb9GNwdvIBAYJv67STIxc78kSNE679w9vsNXiAxnQcnNWOjJPeY88NiopYiYAzEZgwsH-ki6zubgUZsg_tRmw=w1920-h1080"></object>
                                     </div>
                                 </div>
-                                <!-- end modal script  -->
                             </div>
                         </section>
 
+                        <hr class="rounded">
 
-                        <!-- <hr class="rounded">-->
-                        <!-- About section -->
-                        <!--<section id="about" class="tm-section">
-                        <div class="row">
-                            <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12 push-lg-4 push-md-5">
-                                <header>
-                                    <h2 class="tm-blue-text tm-section-title tm-margin-b-45">About the team</h2>
-                                </header>
-                                        <p>We started this group blabla bla</p>
-                                        <p>Donec ut lectus semper, sollicitudin risus blandit, mattis felis. Nam non malesuada odio. Vestibulum vaius, arcu eget rutrum consequat, arcu lacus imperdiet arcu, id pulvinar arcu erat vel magna.</p>
-                                        <p>Ut commodo malesuada eros, quis consequat ante tincidunt ut. Suspendisse malesuada augue vitae nisi sollicitudin placerat.</p>
+                        <!-- About the team section -->
+                        <section id="team" class="tm-section">
+                            <header>
+                                <h2 class="tm-blue-text tm-section-title tm-margin-b-45">Meet the RAA Team</h2>
+                            </header>
+                            <!--Team row 1-->
+                            <div class="row team">
+                                <div class="column teamCol">
+                                    <div class="card teamCard">
+                                        <img src="img/team/ida.jpg" alt="Ida Allen" style="width:100%">
+                                        <div class="container teamContainer">
+                                            <h2>Ida Allen</h2>
+                                            <p class="title teamTitle">President &amp; CEO</p>
+                                            <button type="button" class="btn btn-success" id="message for iallen@therichmondactionalliance.org" onclick="setupContactTemplate(this.id)">Contact</button>
+                                        </div>
+                                    </div>
+                                </div>
 
+                                <div class="column teamCol">
+                                    <div class="card teamCard">
+                                        <img src="img/team/ashley.jpg" alt="Ashley Cottingham" style="width:100%">
+                                        <div class="container">
+                                            <h2>Ashley Cottingham</h2>
+                                            <p class="title teamTitle">Vice President</p>
+                                            <button type="button" class="btn btn-success" id="message for acottingham@therichmondactionalliance.org" onclick="setupContactTemplate(this.id)">Contact</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column teamCol">
+                                    <div class="card teamCard">
+                                        <img src="img/team/crystal.jpg" alt="Crystal Suber" style="width:100%">
+                                        <div class="container">
+                                            <h2>Crystal Suber</h2>
+                                            <p class="title teamTitle">Chair of Finances</p>
+                                            <button type="button" class="btn btn-success" id="message for csuber@therichmondactionalliance.org" onclick="setupContactTemplate(this.id)">Contact</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 pull-lg-8 pull-md-7 tm-about-img-container">
-                                 <img src="img/neaty-02.jpg" alt="Image" class="img-fluid">
-                            </div>
-                        </div>
-                        </section> -->
+                            <!--Team row 2-->
+                            <div class="row team">
+                                <div class="column teamCol">
+                                    <div class="card teamCard">
+                                        <img src="img/team/chanae.jpg" alt="Chanae Joyner" style="width:100%">
+                                        <div class="container teamContainer">
+                                            <h2>Chanae Joyner</h2>
+                                            <p class="title teamTitle">Chair of Volunteering</p>
+                                            <button type="button" class="btn btn-success" id="message for cjoyner@therichmondactionalliance.org" onclick="setupContactTemplate(this.id)">Contact</button>
+                                        </div>
+                                    </div>
+                                </div>
 
+                                <div class="column teamCol">
+                                    <div class="card teamCard">
+                                        <img src="img/team/corey.jpg" alt="Corey Gates" style="width:100%">
+                                        <div class="container">
+                                            <h2>Corey Gates</h2>
+                                            <p class="title teamTitle">Chief of Technology</p>
+                                            <button type="button" class="btn btn-success" id="message for cgates@therichmondactionalliance.org" onclick="setupContactTemplate(this.id)">Contact</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column teamCol">
+                                    <div class="card teamCard">
+                                        <img src="img/team/taneil.jpg" alt="Taneil Moore" style="width:100%">
+                                        <div class="container">
+                                            <h2>Taneil Moore</h2>
+                                            <p class="title teamTitle">Chair of Public Relations</p>
+                                            <button type="button" class="btn btn-success" id="message for tmoore@therichmondactionalliance.org" onclick="setupContactTemplate(this.id)">Contact</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Team row 3-->
+                            <div class="row team">
+                                <div class="column teamCol">
+                                    <div class="card teamCard">
+                                        <img src="img/team/dennisa.jpg" alt="Dennisa Booth" style="width:100%">
+                                        <div class="container teamContainer">
+                                            <h2>Dennisa Booth</h2>
+                                            <p class="title teamTitle">Secretary &amp; Social Media Coordinator</p>
+                                            <button type="button" class="btn btn-success" id="message for dbooth@therichmondactionalliance.org" onclick="setupContactTemplate(this.id)">Contact</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column teamCol">
+                                    <div class="card teamCard">
+                                        <img src="img/team/amanda.png" alt="Amanda Hurley" style="width:100%">
+                                        <div class="container">
+                                            <h2>Amanda Hurley</h2>
+                                            <p class="title teamTitle">Event Coordinator</p>
+                                            <button type="button" class="btn btn-success" id="message for ahurley@therichmondactionalliance.org" onclick="setupContactTemplate(this.id)">Contact</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column teamCol">
+                                    <div class="card teamCard">
+                                        <img src="img/team/sandra.jpg" alt="Sandra Mullins" style="width:100%">
+                                        <div class="container">
+                                            <h2>Sandra Mullins</h2>
+                                            <p class="title teamTitle">Social Media Coordinator &amp; Photographer</p>
+                                            <button type="button" class="btn btn-success" id="message for smullins@therichmondactionalliance.org" onclick="setupContactTemplate(this.id)">Contact</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Team row 4-->
+                            <div class="row team">
+                                <div class="column teamCol">
+                                    <div class="card teamCard">
+                                        <img src="img/team/chaney.jpg" alt="Chaney Hambrick" style="width:100%">
+                                        <div class="container teamContainer">
+                                            <h2>Chaney Hambrick</h2>
+                                            <p class="title teamTitle">Assistant Event Coordinator </p>
+                                            <button type="button" class="btn btn-success" id="message for chambrick@therichmondactionalliance.org" onclick="setupContactTemplate(this.id)">Contact</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column teamCol">
+                                    <div class="card teamCard">
+                                        <img src="img/team/katie.jpg" alt="Katie Stevens" style="width:100%">
+                                        <div class="container">
+                                            <h2>Katie Stevens</h2>
+                                            <p class="title teamTitle">Assistant Volunteer Coordinator</p>
+                                            <button type="button" class="btn btn-success" id="message for kstevens@therichmondactionalliance.org" onclick="setupContactTemplate(this.id)">Contact</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column teamCol">
+                                    <div class="card teamCard">
+                                        <img src="img/team/raally.png" alt="RAAllies" style="width:100%">
+                                        <div class="container">
+                                            <h2>RAA Allies</h2>
+                                            <p>
+                                                We love all our allies, if you want to become one please fill out the
+                                                contact or volunteer form and we will reach out to you as soon as we can.
+                                                Thank you!
+                                            </p>
+                                            <button type="button" class="btn btn-success" id="Hello, I want to become an RAA Ally!" onclick="setupContactTemplate(this.id)">Become an Ally</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
 
                         <hr class="rounded">
+
+                        <!-- Donate section -->
+                        <section id="donate" class="tm-section">
+                            <header>
+                                <h2 class="tm-blue-text tm-section-title tm-margin-b-0">We love and accept donations!</h2>
+                                <h4>Donations help us have amazing events and spread educational opportunities.</h4>
+                            </header>
+                            <div class="row donationPlatforms">
+                                <div class="col-lg-4 col-md-7 col-sm-12 col-xs-12 push-lg-8 push-md-5 tm-about-img-container">
+                                    <a href="https://cash.app/$RichActionAlliance"><img src="img/cashappTag.png" alt="Image" class="img-fluid" width="150" height="150"></a>
+                                </div>
+                                <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 pull-lg-4 pull-md-7 tm-about-img-container">
+                                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                        <input type="hidden" name="cmd" value="_s-xclick" />
+                                        <input type="hidden" name="hosted_button_id" value="ECSGVPAX5ZLBN" />
+                                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                                        <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="rounded">
+
                         <!-- Contact Us section -->
                         <section id="contact" class="tm-section">
                             <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Contact Us</h2></header>
-                            <p>If your interested in partnering with us or just have general questions, please fill out the form below and we will get back to you as soon as we are able.</p>
+                            <p>If you're interested in partnering with us or just have general questions, please fill out the form below and we will get back with you as soon as we are able.</p>
                             <p>Thank you.</p>
                             <div class="row">
                                 <div class="col-lg-6">
                                     <form action="https://postmail.invotes.com/send"
                                           method="post" id="email_form">
-                                        <input type="text" name="subject" placeholder="Subject" />
+                                        <input id="subjectText" type="text" name="subject" placeholder="Subject" />
                                         <textarea name="text" placeholder="Message"></textarea>
                                         <input type="hidden" name="access_token" value="o3fcx7q8afywi7378k8uksrp" />
                                         <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
@@ -203,12 +367,32 @@
                             </p>
                             <p>Powered by <a href="https://postmail.invotes.com" target="_blank">PostMail</a></p>
                         </footer>
-                    </div>
-
-                </div> <!-- Right column: content -->
-            </div>
+                    </div> <!-- end of site body -->
+                </div> <!-- end of Right column: content -->
+            </div><!--end of left right container-->
         </div> <!-- row -->
     </div> <!-- container -->
+    <!--Modal Section-->
+    <!-- The Form Modal -->
+    <div id="formModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" rel="formModal" id="formClose">&times;</span>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdR4DpfxRSF_N02Ojkl-75u2pmy6wEUogRGVLsUj4ka0TvYBw/viewform?embedded=true" width="640" height="1249" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+    </div>
+
+    <!-- The EventListing Modal -->
+    <div id="eventListingModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" rel="eventListingModal" id="listingClose">&times;</span>
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FRichmond.action.alliance%2F&tabs=events&width=500&height=244&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=true&appId=746641966104887" width="500" height="244" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        </div>
+    </div>
+
+    <!--End Modal Section-->
     <!-- load JS files -->
     <script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
     <script src="js/jquery.magnific-popup.min.js"></script>     <!-- Magnific pop-up (http://dimsemenov.com/plugins/magnific-popup/) -->
@@ -225,6 +409,7 @@
                 $('.tm-current-year').text(new Date().getFullYear());
             });
     </script>
+
     <!-- script for email form submit button  -->
     <script>
             var submitButton = document.getElementById("submit_form");
@@ -236,36 +421,14 @@
                 }, 1);
             });
     </script>
-    <!-- script for event modal  -->
+
+    <!-- script for close method for modal  -->
     <script>
-        // Get the modal
-            var modal = document.getElementById("eventModal");
-
-            // Get the button that opens the modal
-            var btn = document.getElementById("gallery1");
-
-            //close method used by form modal as well
+            //close method for modals
             var close_click = function() {
                 var ModalID = this.getAttribute("rel");
                 document.getElementById(ModalID).style.display = 'none';
             };
-
-            // Get the <span> element that closes the modal
-            var span = document.getElementById("eventClose");
-
-            // When the user clicks on the button, open the modal
-            btn.onclick = function() {
-              modal.style.display = "block";
-            }
-            span.addEventListener('click', close_click, false) ;
-
-
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-              if (event.target == modal) {
-                modal.style.display = "none";
-              }
-            }
     </script>
 
     <!-- script for form modal  -->
@@ -275,6 +438,7 @@
 
             // Get the button that opens the modal
             var formbtn = document.getElementById("formButton");
+
 
             // Get the <span> element that closes the modal
             var span1 = document.getElementById("formClose");
@@ -292,6 +456,7 @@
               }
             }
     </script>
+
     <!-- script for eventListing Modal  -->
     <script>
         // Get the form modal
@@ -315,6 +480,16 @@
                 eventListingModal.style.display = "none";
               }
             }
+
+    </script>
+
+    <!-- script for contact form subject line auto populate   -->
+    <script>
+        function setupContactTemplate(clicked_id) {
+          var contactSubjectLine = document.getElementById("subjectText");
+          contactSubjectLine.value= clicked_id;
+          confirm("subject line populated in the contact form below");
+        }
     </script>
 </body>
 </html>
